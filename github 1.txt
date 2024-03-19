@@ -1,4 +1,4 @@
-# prime no . checker using isPrime function
+// prime no . checker using isPrime function
 // code 
 #include <stdio.h>
 
@@ -12,11 +12,12 @@ int isPrime(int n) {
         is = 0;
     }
     else {
-        // Check divisibility from 2 to n-1
-        for (int i = 2; i < n; i++) {
+        // Check divisibility from 2 to square root of n
+        for (int i = 2; i <= n/2; i++) {
             if (n % i == 0) {
-                is = 0; // If divisible by any number, it's not prime
-                break;
+                is = 0; 
+                break;// If divisible by any number, 2220ot prime
+                
             }
         }
     }
