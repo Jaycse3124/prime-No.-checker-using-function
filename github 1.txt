@@ -24,6 +24,7 @@ int isPrime(int n) {
     return is;
 }
 
+
 int main() {
     int n;
     
@@ -87,4 +88,26 @@ scanf("%d",&num2);
     }
     }
     return 0;
+}
+
+// C Program for Quadratic Equation Roots
+#include<stdio.h>
+int quadric(int a,int b,int c)
+{
+    int quad;
+    //username :-Jaycse3124
+    quad=b*b-4*a*c;
+    return quad;
+}
+int main()
+{
+    int a,b,c;
+    //username :-Jaycse3124
+    printf("enter the value of a,b,c");
+    scanf("\n%d%d%d",&a,&b,&c);
+    int ans=quadric(a,b,c);
+    //username :-Jaycse3124
+    printf(" Result is : %d",ans);
+    return 0;
+    
 }
