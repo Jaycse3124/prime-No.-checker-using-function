@@ -91,23 +91,56 @@ scanf("%d",&num2);
 }
 
 // C Program for Quadratic Equation Roots
-#include<stdio.h>
-int quadric(int a,int b,int c)
-{
-    int quad;
-    //username :-Jaycse3124
-    quad=b*b-4*a*c;
-    return quad;
+// C program to find roots of 
+// a quadratic equation 
+#include <math.h> 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+// Prints roots of quadratic 
+// equation ax*2 + bx + x 
+void findRoots(int a, int b, int c) 
+{ 
+	// If a is 0, then equation is 
+	// not quadratic, but linear 
+//username Jaycse3124
+	if (a == 0) { 
+		printf("Invalid"); 
+		return; 
+	} 
+
+	int d = b * b - 4 * a * c; 
+	double sqrt_val = sqrt(abs(d)); 
+//username Jaycse3124
+
+	if (d > 0) { 
+		printf("Roots are real and different\n"); 
+		printf("%f\n%f", (double)(-b + sqrt_val) / (2 * a), 
+			(double)(-b - sqrt_val) / (2 * a)); 
+	} 
+	else if (d == 0) { 
+		printf("Roots are real and same\n"); 
+		printf("%f", -(double)b / (2 * a)); 
+	} 
+	else // d < 0 
+	{ 
+		printf("Roots are complex\n"); 
+		printf("%f + i%f\n%f - i%f", -(double)b / (2 * a), 
+			sqrt_val / (2 * a), -(double)b / (2 * a), 
+			sqrt_val / (2 * a)); 
+	} 
+} 
+//username Jaycse3124
+
+// Driver code 
+int main() 
+{ 
+	int a = 1, b = -7, c = 12;
+//username Jaycse3124
+
+
+	// Function call 
+	findRoots(a, b, c); 
+	return 0; 
 }
-int main()
-{
-    int a,b,c;
-    //username :-Jaycse3124
-    printf("enter the value of a,b,c");
-    scanf("\n%d%d%d",&a,&b,&c);
-    int ans=quadric(a,b,c);
-    //username :-Jaycse3124
-    printf(" Result is : %d",ans);
-    return 0;
-    
-}
+
