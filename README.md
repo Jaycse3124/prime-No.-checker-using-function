@@ -1,1 +1,1 @@
-# prime-No.-checker-using-function
+19 march geeks for geeks Function solution 
